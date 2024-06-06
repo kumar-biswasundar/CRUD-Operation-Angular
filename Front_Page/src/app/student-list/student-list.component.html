@@ -1,0 +1,28 @@
+<div class="form-outline mt-3">
+  <input type="search" [(ngModel)]="searchText" id="form1" class="form-control"   placeholder="Search by Name" aria-label="search">
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="table-dark">First Name</th>
+      <th class="table-dark">Last Name</th>
+      <th class="table-dark">Stream</th>
+      <th class="table-dark">Actions</th> <!-- Combine action columns -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students |filter:searchText">
+      <td>{{ student.firstName }}</td>
+      <td>{{ student.lastName }}</td>
+      <td>{{ student.strem }}</td> <!-- Corrected spelling of 'stream' -->
+
+      <!-- Combine action buttons into a single cell -->
+      <td>
+        <button (click)="updateStudent(student.s_id)" class="btn btn-primary">Update</button>
+        <button (click)="deleteStudent(student.s_id)" class="btn btn-danger">Delete</button>
+        <button (click)="studentDetails(student.s_id)" class="btn btn-info">View</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

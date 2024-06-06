@@ -1,0 +1,23 @@
+.student-details {
+    margin-top: 20px;
+}
+
+.details-title {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.table-bordered {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-bordered th,
+.table-bordered td {
+    padding: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th {
+    background-color: #f8f9fa;
+}
